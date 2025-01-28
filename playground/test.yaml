@@ -1,0 +1,17 @@
+- name: Test SIS lookup plugin
+  hosts:
+    - localhost
+  tasks:
+    - name: Inspect NSWI126
+      ansible.builtin.debug: msg="{{ lookup('sis', 'NSWI126') }}"
+
+    - name: Generate files for lecture notes
+      vars:
+        subject: "{{ lookup('sis', item) }}"
+      ansible.builtin.template:
+        src: templates/subject.md.j2
+        dest: "output/{{ item }}.md"
+      loop:
+        - NDBI001
+        - NDBI025
+        - NSWI126

@@ -1,0 +1,15 @@
+# {{ subject['název'] }}
+
+## Základní údaje
+
+| Klíč     | Hodnota                      |
+|----------|------------------------------|
+| Kód:     | {{ subject['kód'] }} |
+| Kredity: | {{ subject['e-kredity'] }} |
+{% if 'vyučující' in subject %}
+| Vyučující: | {{ subject['vyučující'] }} |
+{% endif %}
+
+{% if 'další informace' in subject %}
+Další informace na {{ subject['další informace'] }}.
+{% endif %}
