@@ -1,0 +1,21 @@
+[project]
+name = "ansible-lookup-plugin"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ansible-core (>=2.18.2,<3.0.0)",
+    "beautifulsoup4 (>=4.12.3,<5.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+]
+
+[project.urls]
+repository = "https://github.com/bugulin/ansible-lookup-plugin"
+
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.3"
+types-beautifulsoup4 = "^4.12.0.20241020"
