@@ -75,24 +75,24 @@ To view plugin's documentation, run following command:
 
 ```console
 $ ansible-doc -t lookup sis
-> LOOKUP [1msis[0m (/app/extension/plugins/lookup/sis.py)
+> LOOKUP sis (/usr/share/ansible/plugins/lookup/sis.py)
 
   Get information about subjects taught at Charles University.
 
-[1mOPTIONS[0m (red indicates it is required):
+OPTIONS (red indicates it is required):
 
-   [1m_terms[0m  subject codes
+   _terms  subject codes
         type: string
 
-[1mAUTHOR[0m: Petr Borňás <p@brns.cz>
+AUTHOR: Petr Borňás <p@brns.cz>
 
-[1mNAME[0m: sis
+NAME: sis
 
-[1mEXAMPLES:[0m
+EXAMPLES:
 - name: Inspect NSWI126
   debug: msg="{{ lookup('sis', 'NSWI126') }}"
 
-[1mRETURN VALUES:[0m
+RETURN VALUES:
 
    _list   information published about the subjects
         elements: dict
